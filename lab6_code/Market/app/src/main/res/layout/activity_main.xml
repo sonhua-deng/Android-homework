@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.example.lenovo.market.MainActivity">
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/itemsRecyclyer" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layoutList"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/imageMain"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/text"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/text1Main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="购物车"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/imageMain"
+                    android:layout_marginStart="23dp" />
+                <TextView
+                    android:id="@+id/text2Main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="50dp"
+                    android:text="价格"
+                    android:textColor="#000"
+                    android:textSize="25sp"
+                    android:layout_marginTop="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/text1Main" />
+            </RelativeLayout>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="true"
+                android:id="@+id/list">
+            </ListView>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="10dp"
+            android:background="#fff"
+            android:src="@drawable/shoplist"
+            app:backgroundTint="#fff"
+            app:borderWidth="0dp"
+            app:elevation="5dp"
+            app:layout_anchorGravity="bottom|center" />
+</FrameLayout>
